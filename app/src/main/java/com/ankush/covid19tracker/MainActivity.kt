@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }, {error->
-                Toast.makeText(this,"Failto get data",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Fail to get data",Toast.LENGTH_LONG).show()
 
             })
         queue.add(request)
@@ -89,9 +89,9 @@ class MainActivity : AppCompatActivity() {
             JsonObjectRequest(Request.Method.GET, url,null, { response ->
                 try {
                     val worldCases: Int = response.getInt("cases")
-                    val worldReovered: Int = response.getInt("recovered")
+                    val worldRecovered: Int = response.getInt("recovered")
                     val worldDeaths: Int = response.getInt("deaths")
-                    worldRecoveredTV.text = worldReovered.toString()
+                    worldRecoveredTV.text = worldRecovered.toString()
                     worldCasesTV.text = worldCases.toString()
                     worldDeathsTV.text = worldDeaths.toString()
 
@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                     e.printStackTrace()
                 }
             }, {error->
-                Toast.makeText(this,"Failto get data",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Fail to get data",Toast.LENGTH_LONG).show()
             })
         queue.add(request)
     }
