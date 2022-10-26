@@ -12,6 +12,7 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONException
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var worldCasesTV:TextView
     lateinit var worldRecoveredTV:TextView
     lateinit var worldDeathsTV:TextView
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
         worldCasesTV = findViewById(R.id.idTVWorldCases)
         worldRecoveredTV = findViewById(R.id.idTVWorldRecovered)
         worldDeathsTV = findViewById(R.id.idTVWorldDeaths)
