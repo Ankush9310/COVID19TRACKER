@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         countryDeathsTV = findViewById(R.id.idTVIndiaDeaths)
         stateRV = findViewById(R.id.idRVStates)
         stateList = ArrayList<StateModel>()
+
         getStateInfo()
         getWorldInfo()
 
@@ -84,6 +85,7 @@ class MainActivity : AppCompatActivity() {
         queue.add(request)
 
     }
+
 
     private fun getWorldInfo() {
         val url = "https://corona.lmao.ninja/v3/covid-19/all"
